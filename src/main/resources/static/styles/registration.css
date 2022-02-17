@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 10;
+  font-family: "Dosis";
+}
+body {
+  background-size: 200% 100% !important;
+  animation: move 10s ease infinite;
+  transform: translate3d(0, 0, 0);
+  background-color: floralwhite;
+}
+
+.user {
+  width: 90%;
+  max-width: 340px;
+  margin: 10vh auto;
+}
+
+.page_header_logo {
+  text-align: center;
+  opacity: 0;
+  transform: translate3d(0, 500px, 0);
+  animation: arrive 500ms ease-in-out 0.7s forwards;
+}
+
+.page_title {
+  text-align: center;
+  font-size: 90px;
+  margin-bottom: -10px;
+  font-weight: 500;
+  color: #1d8787;
+}
+
+.form {
+  align-items: center;
+  margin-top: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate3d(0, 500px, 0);
+  animation: arrive 500ms ease-in-out 0.9s forwards;
+}
+
+.form--no {
+  animation: NO 1s ease-in-out;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.form__input {
+  font-size: large;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  transition: 0.3s;
+}
+
+.accounttype {
+  box-sizing: border-box;
+  text-align: center;
+  word-spacing: 40px;
+  margin: 0px;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.tosbox {
+  text-align: center;
+  margin: 0px;
+  padding: 150px 32px;
+  background-color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.buttonbg {
+  text-align: center;
+  margin: 0px;
+  padding: 15px 32px;
+  background-color: #1d8787;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.regbut {
+  background-color: #1d8787;
+  border: 0;
+  color: #ffffff;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.sign-inmessage {
+  text-align: center;
+  margin: 10px;
+}
+
+.signinbut {
+  text-align: center;
+  padding-left: 100px;
+  margin: 10px;
+  padding: 15px 80px;
+  background-color: #1d8787;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.sintxt {
+  text-decoration: none;
+  color: #ffff;
+  font-size: x-large;
+}
+
+.footer {
+  margin-top: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #1d8787;
+  text-align: center;
+  opacity: 0;
+  transform: translate3d(0, 500px, 0);
+  animation: arrive 500ms ease-in-out 0.7s forwards;
+}
+
+@keyframes NO {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes arrive {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
