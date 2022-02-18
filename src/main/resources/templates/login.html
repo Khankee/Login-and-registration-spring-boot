@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Login</title>
+        <link th:href="@{/styles/login.css}" rel="stylesheet" />
+    </head>
+    <body>
+
+        <!-- error message -->
+        <div th:if="${param.error}">
+            <div class = "alert alert-danger">
+                Invalid username or password.
+            </div>
+        </div>
+        <!--Logout message-->
+        <div th:if="${param.logout}">
+            <div class = "alert alert-out">
+                You have been logged out
+            </div>
+        </div>
+
+        <div class="user">
+
+            <header class="page_header_logo">
+                <img th:src="@{/styles/foodablemain.jpg}" alt="foodable" />
+                <h1 class="page_title">Foodable Login</h1>
+            </header>
+
+            <form th:action="@{/login}" method="post" class = "form">
+                <div class="accounttype">
+                    <input type="radio" name="Donator" /> Donator
+                    <input type="radio" name="Donator" /> Receiver
+                </div>
+                <div class="sign-in-form">
+                    <label for = "username"> Username </label>
+                    <input type="text" class="form__input" id= "username" name = "username"
+                           placeholder="Enter Email ID" autofocus="autofocus" />
+                </div>
+
+                <div class="sign-in-form">
+                    <label for = "password"> Password </label>
+                    <input type="password" class="form__input" id= "password" name = "password"
+                           placeholder="Enter Password"/>
+                </div>
+
+                <div class="buttonbg">
+                    <input class="signinbutton" type="submit" value="Log in" id="login-submit" name="login-submit"/>
+                </div>
+
+                <p class="sign-upmessage">Don't have an account? Sign Up!</p>
+
+                <div class="signupbut">
+                    <a class="suptxt" href="/" th:href="@{/registration}">Register here</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

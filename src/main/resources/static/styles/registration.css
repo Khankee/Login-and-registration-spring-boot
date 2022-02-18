@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 10;
   font-family: "Dosis";
 }
 body {
@@ -14,8 +13,17 @@ body {
 
 .user {
   width: 90%;
-  max-width: 340px;
+  max-width: 390px;
   margin: 10vh auto;
+}
+
+.alert.alert-info{
+  text-align: center;
+  color: darkgreen;
+  font-size: 25px;
+  height: 70px;
+  line-height: 70px;
+  background-color: lightgreen;
 }
 
 .page_header_logo {
@@ -27,7 +35,7 @@ body {
 
 .page_title {
   text-align: center;
-  font-size: 90px;
+  font-size: 50px;
   margin-bottom: -10px;
   font-weight: 500;
   color: #1d8787;
@@ -69,6 +77,10 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   font-size: 16px;
+}
+
+.control-label{
+  margin-left: 15px;
 }
 
 .tosbox {

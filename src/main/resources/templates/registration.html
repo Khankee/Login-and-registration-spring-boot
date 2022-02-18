@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="ISO-8859-1">
-    <title>Registration</title>
-    <link th:href="@{/styles/registration.css}" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Registration</title>
+        <link th:href="@{/styles/registration.css}" rel="stylesheet" />
+    </head>
     <body>
         <!--SUCCESS message-->
         <div th:if="${param.success}">
@@ -13,10 +13,9 @@
         </div>
 
         <div class="user">
-
             <header class="page_header_logo">
                 <!--<a href="Homepage.html">-->
-                <img th:src="@{/images/foodablemain.css}" alt="" />
+                <img th:src="@{/styles/foodablemain.jpg}" alt="foodable" />
                 <!--</a>-->
                 <h1 class="page_title">Foodable Registration</h1>
             </header>
@@ -62,9 +61,10 @@
                 </div>
 
                 <div class="buttonbg">
-                    <button type="submit" class="btn btn-success">Register</button>
-                    <span>Already registered?<a href="/" th:href="@{/login}">Login here</a></span>
+                    <input class="regbut" type="submit" value="Register"/>
                 </div>
+
+                <span>Already registered?<a href="/" th:href="@{/login}">Login here</a></span>
             </form>
         </div>
     </body>

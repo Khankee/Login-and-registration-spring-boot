@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Dosis";
+}
+
+.alert.alert-danger{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    background-color: lightcoral;
+    height: 50px;
+    line-height: 50px;
+}
+
+.alert.alert-out{
+    text-align: center;
+    color: darkgreen;
+    font-size: 25px;
+    background-color: lightgreen;
+    height: 70px;
+    line-height: 70px;
+}
+
+body {
+    background-size: 200% 100% !important;
+    animation: move 10s ease infinite;
+    transform: translate3d(0, 0, 0);
+    background-color: floralwhite;
+}
+
+.user {
+    width: 90%;
+    max-width: 340px;
+    margin: 5vh auto;
+}
+
+.page_header_logo {
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0, 500px, 0);
+    animation: arrive 500ms ease-in-out 0.7s forwards;
+}
+
+.page_title {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: -10px;
+    font-weight: 500;
+    color: #1d8787;
+}
+
+.form {
+    align-items: center;
+    margin-top: 40px;
+    border-radius: 30px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate3d(0, 500px, 0);
+    animation: arrive 500ms ease-in-out 0.9s forwards;
+}
+
+.form--no {
+    animation: NO 1s ease-in-out;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.form__input {
+    font-size: large;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    transition: 0.3s;
+}
+
+.accounttype {
+    box-sizing: border-box;
+    text-align: center;
+    word-spacing: 25px;
+    margin: 0px;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.buttonbg {
+    text-align: center;
+    margin: 0px;
+    padding: 15px 32px;
+    background-color: #1d8787;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.signinbutton {
+    background-color: #1d8787;
+    border: 0;
+    color: #ffffff;
+    font-size: x-large;
+    cursor: pointer;
+    border: 0;
+}
+
+.sign-upmessage {
+    text-align: center;
+    margin: 10px;
+    font-size: large;
+}
+
+.signupbut {
+    text-align: center;
+    padding-left: 100px;
+    margin: 10px;
+    padding: 15px 80px;
+    background-color: #1d8787;
+    border-radius: 0px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.suptxt {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: large;
+}
+
+.g-signin2{
+    object-position: center;
+    margin: 10px;
+    padding: 15px 135px;
+}
+
+.footer {
+    margin-top: 200px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #1d8787;
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0, 500px, 0);
+    animation: arrive 500ms ease-in-out 0.7s forwards;
+}
+
+@keyframes NO {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes arrive {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
